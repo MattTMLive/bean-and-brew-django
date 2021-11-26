@@ -1,25 +1,5 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static '/css/bootstrap.css' %}">
-    <title>title</title>
-</head>
-<body>
-<body style="background-color: #432616; overflow: hidden;" >
-    <div class="d-flex row-12 justify-content-center" style="background-color: burlywood; height: 100px">
-        <a href="index.php">
-        <div class="d-inline-flex">
-            <img src="static/images/logo.png" height=100 alt="Coffee cup">
-            <h1 class="align-self-center m-0" style="font-family: Agency FB; font-weight: 600;">BEAN AND BREW.</h1>
-        </div>
-    </a>
-        <div class="align-self-center" style="padding-left: 600px"><a href="index.php"><button class="brewbutton text-light">Home</button></a></div>
-        <div class="align-self-center"><a href="products.php"><button class="brewbutton">Products</button></a></div>
-        <div class="align-self-center"><a href="order.php"><button class="brewbutton">Order</button></a></div>
-        <div class="align-self-center"><a href="login.php"><button class="brewbutton">Login</button></a></div>
-    </div>
+{% extends 'header.html' %}
+{% block content %}
     <div class="row d-flex justify-content-evenly pt-5">
         <div class="col-2 d-flex justify-content-center">
             <img class="img-fluid rounded-circle" src="https://www.taemana.com/wp-content/uploads/2017/09/team-placeholder.png">
@@ -50,5 +30,4 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+{% endblock %}

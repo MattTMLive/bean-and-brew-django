@@ -1,0 +1,23 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+    <p class="text-light">
+    {% for coffee in products %}
+        <div class="row d-flex justify-content-center mt-5">
+            <div class="col-10 d-flex justify-content-center">
+                <div class="card" style="min-width: 100%; background-color: burlywood;">
+                    <div class="card-body row">
+                        <div class="col-2 p-0"><p class="text-center m-0">
+                            <img class="img-fluid rounded-circle" src="{% static coffee.image %}"></p>
+                        </div>
+                        <div class="col-10">
+                            <h1>{{ coffee.name }} <span style="font-weight: 100">£{{ coffee.price }}</span></h1>
+                            <p>{{ coffee.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </p>
+{% endblock %}

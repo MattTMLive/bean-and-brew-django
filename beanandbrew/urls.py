@@ -18,5 +18,5 @@ from django.urls import path, include
 from beanandbrew.apps.home import urls as home_urls
 
 urlpatterns = [
-    path('test/', include(home_urls)),
+    path('', include(home_urls)),
 ]

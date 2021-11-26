@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static '/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static '/css/beanandbrew.css' %}">
+    <title>title</title>
+</head>
+<body style="background-color: #432616; overflow: hidden;">
+<div class="d-flex row-12 justify-content-center" style="background-color: burlywood; height: 100px">
+    <a href="index.php">
+        <div class="d-inline-flex">
+            <img src="static/images/logo.png" height=100 alt="Coffee cup">
+            <h1 class="align-self-center m-0" style="font-family: Agency FB; font-weight: 600;">BEAN AND BREW.</h1>
+        </div>
+    </a>
+    <div class="align-self-center" style="padding-left: 600px"><a href={% url 'index' %}>
+        <button class="brewbutton">Home</button>
+    </a></div>
+    <div class="align-self-center"><a href={% url 'products' %}>
+        <button class="brewbutton">Products</button>
+    </a></div>
+    <div class="align-self-center"><a href={% url 'order' %}>
+        <button class="brewbutton">Order</button>
+    </a></div>
+    <div class="align-self-center"><a href="login.php">
+        <button class="brewbutton">Login</button>
+    </a></div>
+</div>
+{% block content %}
+
+{% endblock %}
+
+</body>
+</html>
